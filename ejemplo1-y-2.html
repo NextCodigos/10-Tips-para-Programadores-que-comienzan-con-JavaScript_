@@ -1,0 +1,59 @@
+<!-- EJEMPLO1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Definimos una clase para representar una cerveza
+        class Beer {
+            // Constructor que inicializa el nombre y la marca de la cerveza
+            constructor(name, brand) {
+                this.name = name;
+                this.brand = brand;
+            }
+        }
+
+        // Creamos una instancia de la clase Beer con nombre "Tremens" y marca "Delirium"
+        let beer = new Beer("Tremens", "Delirium");
+
+        // Accedemos al nombre de la cerveza y lo mostramos en la consola
+        console.log(beer.name);
+    </script>
+</body>
+</html>
+
+
+<!-- EJEMPLO2 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Creamos clase y constructor
+        class Beer2{
+            constructor(name, brand){
+                this.name = name;
+                this.brand = brand;
+            }
+            // Añadimos funcion
+            show(){
+                return this.name + " " + this.brand;
+            }
+        }
+        // Creamos objeto
+        let beer2 = new Beer2("Tremens","Delirium");
+        // Vemos el metodo de funcion
+        console.log(beer2.show());
+    </script>
+</body>
+</html>

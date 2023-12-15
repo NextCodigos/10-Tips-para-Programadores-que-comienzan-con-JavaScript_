@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Definimos una clase para representar una cerveza
+        class Beer2 {
+            // Constructor que inicializa el nombre y la marca de la cerveza
+            constructor(name, brand) {
+                this.name = name;
+                this.brand = brand;
+            }
+            
+            // Función para mostrar información de la cerveza
+            show() {
+                return this.name + " by " + this.brand;
+            }
+        }
+
+        // Creamos una instancia de la clase Beer2 con nombre "Tremens" y marca "Delirium"
+        let beer2 = new Beer2("Tremens", "Delirium");
+
+        // Mostramos la información de la cerveza usando el método show()
+        console.log(beer2.show());
+    </script>
+</body>
+</html>
