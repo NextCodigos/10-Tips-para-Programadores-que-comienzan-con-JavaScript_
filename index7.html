@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frutería</title>
+</head>
+<body>
+  <h2 id="enunciado"></h2>
+  <script>
+    // Definimos una clase para representar una fruta
+    class Fruta {
+      // Constructor que inicializa el nombre, la descripción, el precio y la cantidad de la fruta
+      constructor(nombre, descripcion, precio, cantidad) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.cantidad = cantidad;
+      }
+
+      // Función para escribir la información de la fruta en la web
+      writeToWeb(elementId) {
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.innerHTML += `<p>${this.nombre} - ${this.descripcion} - Precio: $${this.precio} - Cantidad: ${this.cantidad} unidades</p>`;
+        }
+      }
+    }
+
+    // Creamos instancias de la clase Fruta
+    let fruta1 = new Fruta("Manzana", "Fruta roja y jugosa", 1.50, 10);
+    let fruta2 = new Fruta("Plátano", "Fruta amarilla y curva", 0.50, 20);
+    let fruta3 = new Fruta("Naranja", "Fruta anaranjada y jugosa", 1.00, 15);
+    let fruta4 = new Fruta("Fresa", "Fruta roja y dulce", 2.00, 5);
+    let fruta5 = new Fruta("Pera", "Fruta verde y jugosa", 1.25, 12);
+    let fruta6 = new Fruta("Uva", "Fruta morada y dulce", 1.75, 8);
+
+    // Escribimos la información de las frutas en la web usando la función writeToWeb()
+    fruta1.writeToWeb("enunciado");
+    fruta2.writeToWeb("enunciado");
+    fruta3.writeToWeb("enunciado");
+    fruta4.writeToWeb("enunciado");
+    fruta5.writeToWeb("enunciado");
+    fruta6.writeToWeb("enunciado");
+  </script>
+</body>
+</html>
