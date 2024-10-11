@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Composición con Spread</title>
+</head>
+<body>
+  <h1>Composición con Spread</h1>
+  <p id="enunciado">Función de composición usando spread</p>
+  <p id="resultado"></p>
+  <pre><code>
+    // Función que duplica un número
+    function duplicar(x) {
+      return x * 2;
+    }
+    
+    // Función que suma 3 a un número
+    function sumarTres(x) {
+      return x + 3;
+    }
+    
+    // Función de composición usando spread
+    function composicion(...funcs) {
+      return (x) => funcs.reduce((valor, fn) => fn(valor), x);
+    }
+    
+    // Crear la función compuesta
+    const aplicarComposicion = composicion(duplicar, sumarTres);
+    
+    // Uso
+    const resultado = aplicarComposicion(5);
+    console.log(resultado); // Salida: 13
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "El resultado es: " + resultado;
+  </code></pre>
+  <script>
+    // Función que duplica un número
+    function duplicar(x) {
+      return x * 2;
+    }
+    
+    // Función que suma 3 a un número
+    function sumarTres(x) {
+      return x + 3;
+    }
+    
+    // Función de composición usando spread
+    function composicion(...funcs) {
+      return (x) => funcs.reduce((valor, fn) => fn(valor), x);
+    }
+    
+    // Crear la función compuesta
+    const aplicarComposicion = composicion(duplicar, sumarTres);
+    
+    // Uso
+    const resultado = aplicarComposicion(5);
+    console.log(resultado); // Salida: 13
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "El resultado es: " + resultado;
+  </script>
+</body>
+</html>
