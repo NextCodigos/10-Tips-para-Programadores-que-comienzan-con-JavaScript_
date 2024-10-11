@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="enunciado"></h2>
+    <script>
+// Definimos una clase para representar una cerveza
+class Beer2 {
+  // Constructor que inicializa el nombre, la marca, el tipo, el porcentaje de alcohol y la descripción de la cerveza
+  constructor(name, brand, type, abv, description) {
+    this.name = name;
+    this.brand = brand;
+    this.type = type;
+    this.abv = abv;
+    this.description = description;
+  }
+
+  // Función para mostrar información de la cerveza
+  show() {
+    return `${this.name} by ${this.brand} (${this.type}) - ${this.abv}% ABV - ${this.description}`;
+  }
+}
+
+// Creamos instancias de la clase Beer2 con las nuevas propiedades
+let beer2 = new Beer2("Tremens", "Delirium", "Tripel", 9.0, "Cerveza belga de alta fermentación");
+let beer3 = new Beer2("Chimay Azul", "Chimay", "Dubbel", 9.0, "Cerveza belga de alta fermentación con sabor a frutas");
+let beer4 = new Beer2("Westvleteren 12", "Westvleteren", "Quadrupel", 10.2, "Cerveza belga de alta fermentación con sabor a frutas y especias");
+let beer5 = new Beer2("Orval", "Orval", "Trappist", 6.9, "Cerveza belga de alta fermentación con sabor a frutas y hierbas");
+
+// Mostramos la información de la cerveza usando el método show()
+console.log(beer2.show());
+console.log(beer3.show());
+console.log(beer4.show());
+console.log(beer5.show());
+
+// Mostrar en web
+const enunciado = document.getElementById("enunciado");
+enunciado.innerHTML += beer2.show() + "<br>";
+enunciado.innerHTML += beer3.show() + "<br>";
+enunciado.innerHTML += beer4.show() + "<br>";
+enunciado.innerHTML += beer5.show() + "<br>";
+    </script>
+  </body>
+</html>
