@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currying</title>
+</head>
+<body>
+  <h1>Currying</h1>
+  <p id="enunciado">Función curriada</p>
+  <pre><code>
+    // Función no curriada
+    function suma(x, y) {
+      return x + y;
+    }
+    
+    // Función curriada
+    function sumaCurriada(x) {
+      return function(y) {
+        return x + y;
+      }
+    }
+    
+    // Uso
+    const sumaTres = sumaCurriada(3);
+    console.log(sumaTres(5)); // Salida: 8
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "La suma es: " + sumaTres(5);
+  </code></pre>
+  <p id="resultado"></p>
+  <script>
+    // Función no curriada
+    function suma(x, y) {
+      return x + y;
+    }
+    
+    // Función curriada
+    function sumaCurriada(x) {
+      return function(y) {
+        return x + y;
+      }
+    }
+    
+    // Uso
+    const sumaTres = sumaCurriada(3);
+    console.log(sumaTres(5)); // Salida: 8
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "La suma es: " + sumaTres(5);
+  </script>
+</body>
+</html>
