@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currying</title>
+</head>
+<body>
+  <h1>Currying</h1>
+  <p id="enunciado">Funciones curriadas</p>
+  <pre><code>
+    // Función no curriada
+    function suma(x, y) {
+      return x + y;
+    }
+    
+    // Función curriada
+    function sumaCurriada(x) {
+      return function(y) {
+        return x + y;
+      }
+    }
+    
+    // Función curriada de restar
+    function restaCurriada(x) {
+      return function(y) {
+        return x - y;
+      }
+    }
+    
+    // Función curriada para multiplicar por 2
+    function multiplicarPorDosCurriada(x) {
+      return function() {
+        return x * 2;
+      }
+    }
+    
+    // Uso
+    const sumaTres = sumaCurriada(3);
+    console.log(sumaTres(5)); // Salida: 8
+
+    const restaCinco = restaCurriada(5);
+    console.log(restaCinco(2)); // Salida: 3
+
+    const multiplicarSeisPorDos = multiplicarPorDosCurriada(6);
+    console.log(multiplicarSeisPorDos()); // Salida: 12
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "La suma es: " + sumaTres(5) + "<br>";
+    document.getElementById("resultado").innerHTML += "La resta es: " + restaCinco(2) + "<br>";
+    document.getElementById("resultado").innerHTML += "Multiplicar por 2 da: " + multiplicarSeisPorDos() + "<br>";
+  </code></pre>
+  <p id="resultado"></p>
+  <script>
+    // Función no curriada
+    function suma(x, y) {
+      return x + y;
+    }
+    
+    // Función curriada
+    function sumaCurriada(x) {
+      return function(y) {
+        return x + y;
+      }
+    }
+    
+    // Función curriada de restar
+    function restaCurriada(x) {
+      return function(y) {
+        return x - y;
+      }
+    }
+    
+    // Función curriada para multiplicar por 2
+    function multiplicarPorDosCurriada(x) {
+      return function() {
+        return x * 2;
+      }
+    }
+    
+    // Uso
+    const sumaTres = sumaCurriada(3);
+    console.log(sumaTres(5)); // Salida: 8
+
+    const restaCinco = restaCurriada(5);
+    console.log(restaCinco(2)); // Salida: 3
+
+    const multiplicarSeisPorDos = multiplicarPorDosCurriada(6);
+    console.log(multiplicarSeisPorDos()); // Salida: 12
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "La suma es: " + sumaTres(5) + "<br>";
+    document.getElementById("resultado").innerHTML += "La resta es: " + restaCinco(2) + "<br>";
+    document.getElementById("resultado").innerHTML += "Multiplicar por 2 da: " + multiplicarSeisPorDos() + "<br>";
+  </script>
+</body>
+</html>
