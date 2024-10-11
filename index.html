@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1></h1>
     <script>
         // Definimos una clase para representar una cerveza
         class Beer {
@@ -23,6 +24,9 @@
 
         // Accedemos al nombre de la cerveza y lo mostramos en la consola
         console.log(beer.name);
+        // Mostramos por web
+        // document.write(beer.name);
+        document.body.querySelector("h1").innerHTML = beer.name;
     </script>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1></h1>
     <script>
         // Definimos una clase para representar una cerveza
         class Beer {
@@ -23,6 +24,9 @@
 
         // Accedemos al nombre de la cerveza y lo mostramos en la consola
         console.log(beer.name);
+        // Mostramos por web
+        // document.write(beer.name);
+        document.body.querySelector("h1").innerHTML = beer.name;
     </script>
 </body>
 </html>
@@ -38,6 +42,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2></h2>
     <script>
         // Creamos clase y constructor
         class Beer2{
@@ -54,6 +59,8 @@
         let beer2 = new Beer2("Tremens","Delirium");
         // Vemos el metodo de funcion
         console.log(beer2.show());
+        // Mostramos por web
+        document.body.querySelector("h2").innerHTML = beer2.show();
     </script>
 </body>
 </html>

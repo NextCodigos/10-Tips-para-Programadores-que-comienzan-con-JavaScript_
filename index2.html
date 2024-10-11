@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2 id="enunciado"></h2>
     <!-- Min:1:58 -->
     <script>
         // Definimos una clase para representar una cerveza
@@ -22,11 +23,16 @@
             }
         }
 
+
         // Creamos una instancia de la clase Beer2 con nombre "Tremens" y marca "Delirium"
         let beer2 = new Beer2("Tremens", "Delirium");
 
+
         // Mostramos la información de la cerveza usando el método show()
         console.log(beer2.show());
+        // Mostramos en web
+        const enunciado = document.getElementById("enunciado");
+        enunciado.innerHTML = beer2.show();
     </script>
 </body>
 </html>

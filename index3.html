@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h2 id="enunciado"></h2>
     <script>
-        // Definimos una clase para representar una cerveza
-        class Beer2 {
-            // Constructor que inicializa el nombre y la marca de la cerveza
-            constructor(name, brand) {
-                this.name = name;
-                this.brand = brand;
-            }
-            
-            // Función para mostrar información de la cerveza
-            show() {
-                return this.name + " by " + this.brand;
-            }
+      // Definimos una clase para representar una cerveza
+      class Beer2 {
+        // Constructor que inicializa el nombre y la marca de la cerveza
+        constructor(name, brand) {
+          this.name = name;
+          this.brand = brand;
         }
 
-        // Creamos una instancia de la clase Beer2 con nombre "Tremens" y marca "Delirium"
-        let beer2 = new Beer2("Tremens", "Delirium");
+        // Función para mostrar información de la cerveza
+        show() {
+          return this.name + " by " + this.brand;
+        }
+      }
 
-        // Mostramos la información de la cerveza usando el método show()
-        console.log(beer2.show());
+      // Creamos una instancia de la clase Beer2 con nombre "Tremens" y marca "Delirium"
+      let beer2 = new Beer2("Tremens", "Delirium");
+      let beer3 = new Beer2("Chimay Azul", "Chimay");
+      let beer4 = new Beer2("Westvleteren 12", "Westvleteren");
+      let beer5 = new Beer2("Orval", "Orval");
+      // Mostramos la información de la cerveza usando el método show()
+      console.log(beer2.show());
+// Mostrar en web
+const enunciado = document.getElementById("enunciado");
+enunciado.innerHTML += beer2.show() + "<br>";
+enunciado.innerHTML += beer3.show() + "<br>";
+enunciado.innerHTML += beer4.show() + "<br>";
+enunciado.innerHTML += beer5.show() + "<br>";
+
     </script>
-</body>
+  </body>
 </html>
