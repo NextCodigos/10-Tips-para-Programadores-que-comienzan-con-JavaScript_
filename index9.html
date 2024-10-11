@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Composition</title>
+</head>
+<body>
+  <h1>Composition</h1>
+  <p id="enunciado">Función de composición</p>
+  <p id="resultado"></p>
+  <pre><code>
+    // Función que duplica un número
+    function duplicar(x) {
+      return x * 2;
+    }
+    
+    // Función que suma 3 a un número
+    function sumarTres(x) {
+      return x + 3;
+    }
+    
+    // Función de composición
+    function composicion(x) {
+      return sumarTres(duplicar(x));
+    }
+    
+    // Uso
+    const resultado = composicion(5);
+    console.log(resultado); // Salida: 13
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "El resultado es: " + resultado;
+  </code></pre>
+  <script>
+    // Función que duplica un número
+    function duplicar(x) {
+      return x * 2;
+    }
+    
+    // Función que suma 3 a un número
+    function sumarTres(x) {
+      return x + 3;
+    }
+    
+    // Función de composición
+    function composicion(x) {
+      return sumarTres(duplicar(x));
+    }
+    
+    // Uso
+    const resultado = composicion(5);
+    console.log(resultado); // Salida: 13
+    
+    // Mostrar resultado en pantalla
+    document.getElementById("resultado").innerHTML += "El resultado es: " + resultado;
+
+//     En este ejemplo, tenemos tres funciones:
+
+// duplicar(x): duplica un número
+// sumarTres(x): suma 3 a un número
+// composicion(x): compone las dos funciones anteriores para obtener el resultado final
+// La función composicion(x) llama a la función duplicar(x) y luego a la función sumarTres(x) con el resultado de la primera función.
+
+// Cuando ejecutamos la función composicion(5), obtenemos el resultado 13, que es el resultado de duplicar 5 y sumarle 3.
+  </script>
+</body>
+</html>
